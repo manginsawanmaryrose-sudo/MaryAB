@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Rose - Portfolio</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: background 0.3s;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav li a {
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav li a:hover {
+            color: #ff6b6b;
+        }
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        #home h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        .typewriter {
+            font-size: 1.5rem;
+            border-right: 2px solid white;
+            animation: blink 1s infinite;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes blink {
+            0%, 50% { border-color: white; }
+            51%, 100% { border-color: transparent; }
+        }
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        /* About */
+        #about p {
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Projects */
+        #projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            padding: 1rem;
+            font-size: 1.3rem;
+        }
+        .project-card p {
+            padding: 0 1rem 1rem;
+            color: #666;
+        }
+        /* Contact */
+        #contact {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        #contact input, #contact textarea {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        #contact button {
+            padding: 1rem;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #contact button:hover {
+            background: #ff5252;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            #home h1 { font-size: 2.5rem; }
+            .typewriter { font-size: 1.2rem; }
+            nav ul { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1 class="typewriter" id="typewriter"></h1>
+        <p>Creative Professional & Designer</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Mary Rose</h2>
+        <div class="outer-container">
+  <div class="profile-image-container">
+    <img src="mypicture.jpg" alt="Mary Rose">
+  </div>
+</div>
+
+<style>
+.outer-container {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;    /* vertical center */
+  height: 100vh;          /* full viewport height */
+}
+
+.profile-image-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 3px solid #f7e9e3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+        <p>Hi, I'm Mary Rose, a comptech student studying at Lapu-lapu City College. I'm not really from Lapu-lapu but my live here so I transfer from General Santos City this is where I was born and grow up to here, I live here for 3 years, thoses years past faster, I've made some friends but leave after finding other friends that they can hung out with. That's life, we must be ready, we must accept the fact that there are many people in our lives that are meant to leave when the time comes! Gentle reminder: People come and go, that's why make sure to be with yourself always!</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-card">
+            <img src="demonslayer.jpg" alt="Project 1">
+            <h3>Hobbies</h3>
+            <p>I like to dance, to sing, to cook, to explore many things in life.</p>
+        </div>
+        <div class="project-card">
+            <img src="haikyuu.jpg" alt="Project 2">
+            <h3>Goals</h3>
+            <p>My goals is to finish my studies, build my parents house using my own money from hard work.</p>
+        </div>
+        <div class="project-card">
+            <img src="haikyuu.jpg" alt="Project 3">
+            <h3>Wants</h3>
+            <p>Having  my own motorcycle and cars, travel around the world and taste different kind of foods.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Mary Rose. All rights reserved. | <a href="mailto:maryrose@example.com">maryrose@example.com</a></p>
+    </footer>
+
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Typewriter Effect
+        const text = "Mary Rose";
+        const typewriterEl = document.getElementById('typewriter');
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                typewriterEl.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 150);
+            }
+        }
+        window.addEventListener('load', typeWriter);
+
+        // Fade-in on Scroll (Simple Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 1s ease-out forwards';
+                }
+            });
+        });
+        document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+        // Contact Form (Basic Alert - Replace with real backend like Formspree)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
